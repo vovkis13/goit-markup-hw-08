@@ -1,0 +1,36 @@
+.clients {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: block;
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    background-color: var(--white-text-color);
+    border: 1px solid var(--default-svg-color);
+    border-radius: 4px;
+    
+    transition: border var(--default-transition-delay) var(--default-transition-timing);
+    
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-text-color);
+    }
+  }
+
+  &__icon {
+    fill: var(--default-svg-color);
+    
+    transition: fill var(--default-transition-delay) var(--default-transition-timing);
+
+    .clients__link:hover > &,
+    .clients__link:focus > & {
+      fill: var(--accent-text-color);
+    }
+  }
+}

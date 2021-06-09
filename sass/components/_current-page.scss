@@ -1,0 +1,16 @@
+.current-page {
+  display: block;
+  color: var(--accent-text-color);
+  position: relative;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-text-color);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -33px;
+  }
+}

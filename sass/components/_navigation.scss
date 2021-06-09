@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    color: var(--primary-text-color);
+    
+    transition: color var(--default-transition-delay) var(--default-transition-timing);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+  }
+}
