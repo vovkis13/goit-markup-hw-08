@@ -1,22 +1,48 @@
 .clients {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  &__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+    
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+      margin-left: 0;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__link {
-    display: block;
-    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px auto;
     height: 92px;
-    padding: 16px 32px;
+    
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      padding: 16px 32px;
+    }
+    
     background-color: var(--white-text-color);
     border: 1px solid var(--default-svg-color);
     border-radius: 4px;
-    
+
     transition: border var(--default-transition-delay) var(--default-transition-timing);
-    
+
     &:hover,
     &:focus {
       border: 1px solid var(--accent-text-color);
@@ -25,7 +51,7 @@
 
   &__icon {
     fill: var(--default-svg-color);
-    
+
     transition: fill var(--default-transition-delay) var(--default-transition-timing);
 
     .clients__link:hover > &,
