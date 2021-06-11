@@ -1,19 +1,22 @@
 .nav {
-  display: flex;
-  align-items: center;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
 
-  &__link {
-    color: var(--primary-text-color);
-    
-    transition: color var(--default-transition-delay) var(--default-transition-timing);
+    &__link {
+      color: var(--primary-text-color);
 
-    &:hover,
-    &:focus {
-      color: var(--accent-text-color);
+      transition: color var(--default-transition-delay) var(--default-transition-timing);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-text-color);
+      }
     }
   }
 }

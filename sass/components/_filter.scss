@@ -1,13 +1,26 @@
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    
+  }
 
   &__item:not(:last-child) {
     margin-right: 8px;
   }
 
   &__button {
+    height: 38px;
     border: none;
     border-radius: 4px;
     padding: 6px 22px;
@@ -21,11 +34,11 @@
     background-color: var(--button-primary-bg-color);
 
     cursor: pointer;
-    
+
     transition: background-color var(--default-transition-delay) var(--default-transition-timing),
       color var(--default-transition-delay) var(--default-transition-timing),
       border var(--default-transition-delay) var(--default-transition-timing);
-    
+
     &:hover,
     &:focus {
       color: var(--white-text-color);
