@@ -10,10 +10,14 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
-    &__item {
+  }
+  &__item {
+    @media screen and (min-width: 1200px) {
       position: relative;
     }
-    &__overlay {
+  }
+  &__overlay {
+    @media screen and (min-width: 1200px) {
       position: absolute;
       width: 100%;
       padding: 27px 0;

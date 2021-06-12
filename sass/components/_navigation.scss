@@ -3,18 +3,22 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-
-    &__item:not(:last-child) {
+  }
+  &__item:not(:last-child) {
+    @media screen and (min-width: 768px) {
       margin-right: 50px;
     }
+  }
 
-    &__link {
+  &__link {
+    @media screen and (min-width: 768px) {
       color: var(--primary-text-color);
 
       transition: color var(--default-transition-delay) var(--default-transition-timing);
-
-      &:hover,
-      &:focus {
+    }
+    &:hover,
+    &:focus {
+      @media screen and (min-width: 768px) {
         color: var(--accent-text-color);
       }
     }
