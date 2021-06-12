@@ -16,9 +16,15 @@
   }
 
   & .container {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
       align-items: baseline;
+      justify-content: baseline;
     }
   }
 
@@ -26,7 +32,7 @@
     margin-bottom: 20px;
     text-align: center;
     @media screen and (min-width: 1200px) {
-    text-align: left;
+      text-align: left;
     }
     font-weight: 700;
     font-size: 14px;
@@ -57,8 +63,10 @@
     }
   }
 
-
   &__subscribe {
+    @media screen and (min-width: 768px) {
+      width: 100%;    
+    }
   }
 }
 

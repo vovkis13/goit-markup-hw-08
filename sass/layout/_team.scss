@@ -2,7 +2,7 @@
   background-color: var(--button-primary-bg-color);
 }
 .team {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin-top: -30px;
@@ -18,7 +18,15 @@
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-text-color);
 
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      padding-bottom: 30px; 
 
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-bottom: 0;
+    
+    }
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 4 * 30px) / 4);
       padding-bottom: 30px; 

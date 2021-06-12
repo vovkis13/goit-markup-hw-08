@@ -1,65 +1,91 @@
 .page-header {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--header-border-color);
-  & .logo {
-    color: var(--black-text-color);
-  }
 
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   @media screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
 
-    & .container {
-      display: flex;
-      align-items: center;
+  & .logo {
+    color: var(--black-text-color);
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
     }
 
-    & .logo {
+    @media screen and (min-width: 1200px) {
       margin-right: 93px;
-      color: var(--black-text-color);
+    }
+  }
+
+  & .container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
     }
   }
 }
 .header-addr {
   display: none;
-}
-@media screen and (min-width: 1200px) {
-  .header-addr {
-    display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: block;
     margin-left: auto;
+  }
 
-    &__item {
-      display: flex;
-      align-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
-      &:not(:last-child) {
+  &__item {
+    display: flex;
+    align-content: center;
+    &:not(:last-child) {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: 1200px) {
         margin-right: 50px;
       }
     }
+  }
 
-    &__icon {
-      margin-right: 10px;
-      fill: var(--secondary-text-color);
+  &__icon {
+    margin-right: 10px;
+    fill: var(--secondary-text-color);
 
-      transition: fill var(--default-transition-delay) var(--default-transition-timing);
+    transition: fill var(--default-transition-delay) var(--default-transition-timing);
 
-      .header-addr__item:focus-within &,
-      .header-addr__item:hover & {
-        fill: var(--accent-text-color);
-      }
+    .header-addr__item:focus-within &,
+    .header-addr__item:hover & {
+      fill: var(--accent-text-color);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
     }
 
-    &__link {
-      display: block;
-      color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
 
-      transition: color var(--default-transition-delay) var(--default-transition-timing);
+    transition: color var(--default-transition-delay) var(--default-transition-timing);
 
-      .header-addr__item:hover &,
-      &:focus {
-        color: var(--accent-text-color);
-      }
+    .header-addr__item:hover &,
+    &:focus {
+      color: var(--accent-text-color);
     }
   }
 }
