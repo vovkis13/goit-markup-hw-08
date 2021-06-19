@@ -1,10 +1,10 @@
 .spheres-section {
-  display: none;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 47px;
+  padding-top: 47px;
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 }
+
 .spheres {
   display: none;
   @media screen and (min-width: 1200px) {
