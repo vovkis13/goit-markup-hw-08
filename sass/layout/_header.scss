@@ -1,5 +1,5 @@
 .page-header {
-  
+
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--header-border-color);
@@ -26,9 +26,38 @@
   }
 
   & .container {
+    position: relative;
+
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
+    }
+  }
+  &__menu-btn {
+    position: absolute;
+    top: -6px;
+    right: 15px;
+
+    padding: 0;
+    display: block;
+    border: none;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+
+    background-color: transparent;
+    fill: var(--black-text-color);
+
+    cursor: pointer;
+    transition: fill var(--default-transition-delay) var(--default-transition-timing);
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-text-color);
     }
   }
 }
