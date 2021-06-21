@@ -148,6 +148,7 @@ img {
     top: 0;
     left: 0;
     overflow: auto;
+    z-index: 100;
     width: 100vw;
     height: 100vh;
     background-color: var(--white-text-color);
