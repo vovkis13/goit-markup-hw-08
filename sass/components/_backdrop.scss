@@ -6,6 +6,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transform: translate(0, 0);
+  @media screen and (max-height: 800px) { 
+    overflow-y: scroll;
+  }
 
   transition: opacity var(--default-transition-delay) var(--default-transition-timing),
     visibility var(--default-transition-delay) var(--default-transition-timing),
